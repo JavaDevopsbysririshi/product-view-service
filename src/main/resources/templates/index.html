@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>PRODUCT List</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+
+</head>
+<body>
+<h1>PRODUCT DETAILS</h1>
+<table class="table table-striped">
+<tr>
+<th>PRODUCT VIEW ID</th>
+<th>PRODUCT ID</th>
+<th>PRODUCT NAME</th>
+<th>CATEGORY</th>
+<th>STATUS</th>
+<th>DETAILS</th>
+<th>SPECIFICATION</th>
+<th>WEIGHT</th>
+<th>QUANTITY</th>
+<th>PICK ZONE</th>
+<th>PACK ZONE</th>
+<th>SHIPPING AREA</th>
+<th>PRICE</th>
+<th>PROMO CODE</th>
+<th>PROMO DESCRIPTION</th>
+<th>PROMO STARTDATE</th>
+<th>PROMO ENDDATE</th>
+<th>PROMO VALUE</th>
+<th>ACTIONS</th>
+
+</tr>
+<tr th:each="productView:${productView}">
+<td th:utext="${productView.productViewId}"></td>
+<td th:utext="${productView.productId}"></td>
+<td th:utext="${productView.product.productName}"></td>
+<td th:utext="${productView.product.category}"></td>
+<td th:utext="${productView.product.productStatus}"></td>
+<td th:utext="${productView.product.productDescription.details}"></td>
+<td th:utext="${productView.product.productDescription.specification}"></td>
+<td th:utext="${productView.product.productDescription.weight}"></td>
+<td th:utext="${productView.inventory.qty}"></td>
+<td th:utext="${productView.inventory.pickZone}"></td>
+<td th:utext="${productView.inventory.packZone}"></td>
+<td th:utext="${productView.inventory.ShippingArea}"></td>
+<td th:utext="${productView.price.price}"></td>
+<td th:utext="${productView.promotion.promoCode}"></td>
+<td th:utext="${productView.promotion.promoDescription}"></td>
+<td th:utext="${productView.promotion.promoStartDate}"></td>
+<td th:utext="${productView.promotion.promoEndDate}"></td>
+<td th:utext="${productView.promotion.promoValue}"></td>
+<td><a th:href="@{/delete/{productViewId}(productViewId=${productView.productViewId})}" class="btn btn-danger">DELETE</a></td>
+</tr>
+</table>
+
+<div style="padding-bottom: 15px;padding-top: 10px;">
+<a href="/addProduct" class="btn btn-success" >ADD PRODUCT</a>
+<a href="/addInventory" class="btn btn-success">ADD INVENTORY</a>
+</div>
+<div>
+<a href="/addPrice" class="btn btn-success">ADD PRICE</a>
+<a href="/addPromotion" class="btn btn-success">ADD PROMOTION</a>
+</div>
+
+</body>
+</html>

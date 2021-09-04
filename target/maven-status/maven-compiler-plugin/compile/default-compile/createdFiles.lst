@@ -1,0 +1,11 @@
+com\meru\ecommerce\productview\productviewservice\dao\ProductViewRepository.class
+com\meru\ecommerce\productview\productviewservice\service\ProductViewService.class
+com\meru\ecommerce\productview\productviewservice\ProductViewServiceApplication.class
+com\meru\ecommerce\productview\productviewservice\web\ProductViewController.class
+com\meru\ecommerce\productview\productviewservice\entity\Inventory.class
+com\meru\ecommerce\productview\productviewservice\entity\Price.class
+com\meru\ecommerce\productview\productviewservice\service\ProductViewServiceImpl.class
+com\meru\ecommerce\productview\productviewservice\entity\ProductView.class
+com\meru\ecommerce\productview\productviewservice\entity\Product.class
+com\meru\ecommerce\productview\productviewservice\entity\Promotion.class
+com\meru\ecommerce\productview\productviewservice\entity\ProductDescription.class
